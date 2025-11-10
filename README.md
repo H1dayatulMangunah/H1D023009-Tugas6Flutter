@@ -14,111 +14,54 @@ lib/
       ├── form_data.dart
       └── tampil_data.dart
 
-⚙️ Penjelasan Proses Passing Data
-1. Input Data (File: form_data.dart)
 
-Halaman pertama menampilkan form input yang berisi tiga field:
+---
 
-Nama
+## ⚙️ Penjelasan Proses Passing Data
 
-NIM
+1. **Input Data di Form**
+   - Pengguna mengisi *TextField* untuk `nama`, `nim`, dan `tahunLahir` di file `form_data.dart`.
 
-Tahun Lahir
+2. **Validasi dan Navigasi**
+   - Setelah tombol **Simpan** ditekan dan validasi berhasil, program menavigasi ke halaman berikut menggunakan:
+     ```dart
+     Navigator.push(
+       context,
+       MaterialPageRoute(
+         builder: (context) => TampilData(
+           nama: _namaController.text,
+           nim: _nimController.text,
+           tahunLahir: int.parse(_tahunController.text),
+         ),
+       ),
+     );
+     ```
+   - Di sini data dikirim melalui *constructor parameter* ke halaman `TampilData`.
 
-Pengguna mengisi form dan menekan tombol “Simpan”.
+3. **Penerimaan Data**
+   - File `tampil_data.dart` menerima data melalui parameter:
+     ```dart
+     final String nama;
+     final String nim;
+     final int tahunLahir;
+     ```
+   - Data digunakan untuk menghitung umur dan ditampilkan di layar.
 
-Data dari TextFormField disimpan dalam tiga variabel controller:
+4. **Hasil Akhir**
+   - Halaman kedua menampilkan teks seperti:
+     ```
+     Nama saya Stephen Prasetya Chrismaswan, NIM H1D021025, dan umur saya adalah 19 tahun.
+     ```
 
-_namaController.text
-_nimController.text
-_tahunController.text
+---
 
+## 💡 Catatan
+- Gunakan `MaterialApp` untuk navigasi antar halaman.
+- Passing data dilakukan menggunakan **constructor** dan **Navigator.push**.
+- Desain dapat dimodifikasi agar lebih menarik menggunakan `Card`, `Container`, atau `TextStyle`.
 
-Setelah tombol Simpan ditekan, aplikasi melakukan validasi dan mengirim data ke halaman berikutnya menggunakan Navigator.push().
+---
 
-Navigator.push(
-  context,
-  MaterialPageRoute(
-    builder: (context) => TampilData(
-      nama: _namaController.text,
-      nim: _nimController.text,
-      tahunLahir: int.parse(_tahunController.text),
-    ),
-  ),
-);
-
-
-➡️ Pada tahap ini, data dikirim melalui parameter konstruktor (constructor parameter) ke halaman TampilData.
-
-2. Penerimaan dan Penampilan Data (File: tampil_data.dart)
-
-File tampil_data.dart menerima data dari halaman form melalui parameter yang dikirim dari constructor:
-
-final String nama;
-final String nim;
-final int tahunLahir;
-
-
-Data ini diproses untuk menghitung umur:
-
-int umur = DateTime.now().year - tahunLahir;
-
-
-Lalu ditampilkan di halaman dengan format kalimat yang benar menurut EYD/KBBI:
-
-Nama saya [nama], NIM [nim], dan umur saya adalah [umur] tahun.
-
-3. Alur Passing Data (Diagram Sederhana)
-FormData (Input)
-     ↓
-  Navigator.push()
-     ↓
-TampilData (Output)
+## 🖼️ Screenshot
 
 
-Atau secara teks:
-
-Pengguna mengisi data → menekan tombol Simpan → data dikirim lewat Navigator → diterima oleh konstruktor di TampilData → ditampilkan di layar.
-
-🎨 Desain Antarmuka
-
-AppBar berwarna biru pada kedua halaman (Input Data & Perkenalan)
-
-Background putih bersih
-
-Tombol “Simpan” berwarna biru agar konsisten dengan tema aplikasi
-
-Desain dibuat sederhana, bersih, dan mudah digunakan
-
-🧩 File Penting
-main.dart
-
-Menjadi entry point aplikasi.
-
-Mengarahkan ke halaman form pertama (FormData).
-
-ui/form_data.dart
-
-Menyediakan form input untuk Nama, NIM, dan Tahun Lahir.
-
-Melakukan validasi sebelum mengirim data.
-
-Menggunakan Navigator.push() untuk berpindah halaman sambil membawa data.
-
-ui/tampil_data.dart
-
-Menerima data dari form_data.dart melalui konstruktor.
-
-Menghitung umur berdasarkan tahun lahir.
-
-Menampilkan hasil dalam format kalimat yang rapi.
-
-🧠 Kesimpulan
-
-Konsep passing data antar halaman di Flutter dapat dilakukan menggunakan:
-
-Navigator.push() untuk berpindah ke halaman lain.
-
-Parameter konstruktor untuk mengirim data antar widget.
-
-Dengan cara ini, data dari halaman form (FormData) dapat dengan mudah diteruskan dan ditampilkan di halaman hasil (TampilData).
