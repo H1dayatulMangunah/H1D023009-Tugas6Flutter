@@ -154,4 +154,4 @@ Dengan mekanisme ini, Flutter memungkinkan pertukaran data yang mudah antar hala
 
 
 # 📸 Dokumentasi
-![Tampilan aplikasi](assets/Logo%20Masuk%20Screenshot_20250928_213822.png)
+![Tampilan aplikasi](Assets/Tugas6.Gif.mp4)
