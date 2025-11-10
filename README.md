@@ -157,10 +157,10 @@ Dengan mekanisme ini, Flutter memungkinkan pertukaran data yang mudah antar hala
 
 📸 Screenshot Aplikasi
 🏠 Tampilan Awal
-![Tampilan awal](Assets/tampilan%20form.jpg)
+![Tampilan awal](Assets/tampilan%20awal.jpg)
 
 🧾 Tampilan Form
-![Tampilan awal](Assets/tampilan%20awal.jpg)
+![Tampilan awal](Assets/tampilan%20form.jpg)
 
 ✍️ Isi Form
 ![Tampilan awal](Assets/isi%20form.jpg)
