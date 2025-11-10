@@ -1,4 +1,11 @@
-# h1d023009_tugas6
+# IDENTITAS
+
+**Nama: Hidayatul Mangunah**  
+**NIM: H1D023009**  
+**Shift KRS: F**  
+**Shift Baru: E**
+
+
 # 📱 Tugas 6 Flutter – Passing Data dari Form ke Tampilan
 
 ## 🧾 Deskripsi
@@ -146,3 +153,5 @@ Proses **passing data antar halaman di Flutter** dilakukan melalui:
 Dengan mekanisme ini, Flutter memungkinkan pertukaran data yang mudah antar halaman tanpa perlu penyimpanan global atau database.
 
 
+# 📸 Dokumentasi
+![Tampilan aplikasi](assets/Logo%20Masuk%20Screenshot_20250928_213822.png)
