@@ -157,14 +157,17 @@ Dengan mekanisme ini, Flutter memungkinkan pertukaran data yang mudah antar hala
 
 📸 Screenshot Aplikasi
 🏠 Tampilan Awal
-![Tampilan awal](Assets/hasil.jpg)
+![Tampilan awal](Assets/tampilan%20form.jpg)
+
 🧾 Tampilan Form
+![Tampilan awal](Assets/tampilan%20awal.jpg)
 
 ✍️ Isi Form
+![Tampilan awal](Assets/isi%20form.jpg)
 
 ✅ Hasil Output
+![Tampilan awal](Assets/hasil.jpg)
 
 📽️ Demo Video (MP4)
-
 Karena GitHub tidak bisa menampilkan video langsung jika ukurannya besar, kamu bisa menambahkan link manual:
 ![Tampilan aplikasi](Assets/Tugas6.Gif.mp4)
